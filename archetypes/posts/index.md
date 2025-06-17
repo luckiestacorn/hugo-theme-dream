@@ -2,9 +2,6 @@
 title: {{ replace .File.ContentBaseName "-" " " | title }}
 date: {{ .Date }}
 lastmod: {{ .Date }}
-author: Author Name
-# avatar: /img/author.jpg
-# authorlink: https://author.site
 cover: /img/cover.jpg
 # images:
 #   - /img/cover.jpg
