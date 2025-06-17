@@ -47,6 +47,7 @@
     {{ T "allTags" }}
   </a>
 </li>
+{{ partial "themeBar.html" . }}
 {{ else }}
 {{ $navItems := site.Params.navItems }}
 {{ $item := index $navItems . }}

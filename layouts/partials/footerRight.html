@@ -1,26 +1,8 @@
-<div
-  x-data="{ icons: [
-    { name: 'sunny', status: 'n' },
-    { name: 'moon', status: 'y' },
-    { name: 'desktop', status: 'auto' }
-  ] }"
-  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
->
-  <template x-for="icon in icons">
-    <div
-      role="button"
-      tabindex="0"
-      :aria-label="'Select ' + icon.name + ' mode'"
-      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
-      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
-      @click="$store.darkMode.toggle(icon.status)"
-    >
-      <ion-icon
-        :name="`${icon.name}-outline`"
-        class="group-hover:text-primary-content"
-        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
-      >
-      </ion-icon>
-    </div>
-  </template>
+<div class="flex items-center">
+      <div class="gfm-embed items-center" data-url="https://www.gofundme.com/f/help-me-to-save-my-family-from-the-war-zone/widget/small?sharesheet=undefined&attribution_id=sl:a31cb52e-44e9-4501-bf60-71ab1a584068"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+      <p class="text-sm border border-gray-300 p-2">
+        🍉 Mohammed from Gaza is stuck in a warzone. <br>
+        He has two small children under two to provide for. <br>
+        Please consider donating to his family's fundraiser.
+      </p>
 </div>
