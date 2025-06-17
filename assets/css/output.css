@@ -908,12 +908,12 @@
     & > div {
       display: block;
       aspect-ratio: 1 / 1;
-      overflow: hidden;
+      overflow: visible;
     }
     img {
       height: 100%;
       width: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
   .sticky {
