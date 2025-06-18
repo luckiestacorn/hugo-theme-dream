@@ -22,9 +22,19 @@
       <div>
         {{ if site.Params.headerTitle }}
         <a href="{{ site.BaseURL }}" class="text-lg font-semibold cursor-pointer">
-          {{ site.Params.headerTitle }}
+          <span id="header-title">{{ site.Params.headerTitle }}</span><span id="header-suffix" class="text-green-500 transition-opacity duration-500"></span>
         </a>
         {{ end }}
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const suffixes = [" off on an adventure! 🗺️", " sleeping underground 💤", " starting to sprout 🌱", " falling from the tree 🫨🍃", " convening with the squirrels 🐿️️🐿️🐿️️", " OMG RIGHT BEHIND YOU! 😨", " being blessed by a forest spirit ✨🌲🧚", " dreaming of becoming a mighty oak 🌳", " just hearing news of a place called Oakland 📍🌃", " looking for its misplaced cap 🍄‍🟫"];
+            const randomSuffix = suffixes[Math.floor(Math.random() * suffixes.length)];
+            const suffixSpan = document.getElementById("header-suffix");
+            if (suffixSpan) {
+              suffixSpan.textContent = randomSuffix;
+            }
+          });
+        </script>
         {{ if site.Params.motto }}
         <div class="text-base-content/60 text-sm">{{ site.Params.motto }}</div>
         {{ end }}
